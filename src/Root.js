@@ -5,7 +5,7 @@ import { createBrowserHistory } from 'history';
 
 import { configureStore } from './store';
 import { App } from './components/App';
-import { Home } from './Views/Home';
+import Home from './Views/Home';
 
 const history = createBrowserHistory();
 const store = configureStore();
