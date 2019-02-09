@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import { FlashcardForm } from '../../components/Flashcard/Form';
 
-class Home extends Component {
+class Home extends PureComponent {
   render() {
     return (
-      <div>YAY!</div>
+      <FlashcardForm />
     );
   }
 }
