@@ -67,3 +67,6 @@ build/
 .vscode
 .idea
 *.orig
+
+# CSS since SASS is used
+*.css

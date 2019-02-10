@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
-
+import promiseMiddleware from 'redux-promise-middleware';
+import thunkMiddleware from 'redux-thunk';
 import reducers from './reducers';
 
 const loggerMiddleware = createLogger({
@@ -8,7 +9,11 @@ const loggerMiddleware = createLogger({
   collapsed: true
 });
 
-const enhancers = applyMiddleware(loggerMiddleware);
+const enhancers = applyMiddleware(
+  promiseMiddleware, 
+  thunkMiddleware,
+  loggerMiddleware
+);
 
 export const configureStore = (initialState) => {
     return createStore(reducers, initialState, enhancers);

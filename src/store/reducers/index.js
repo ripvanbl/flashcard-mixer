@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
-import { flashcardReducer } from './flashcard';
+import { flashcardCreateReducer } from './flashcardCreate';
+import { flashcardFetchAllReducer } from './flashcardFetchAll';
 
 export default combineReducers({
-  flashcardReducer
+  flashcards: combineReducers({
+    create: flashcardCreateReducer,
+    fetchAll: flashcardFetchAllReducer
+  })
 });
